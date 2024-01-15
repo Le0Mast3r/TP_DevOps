@@ -1,0 +1,22 @@
+name: TP ETAP 1
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+        
+
+    - name: Appeler le fichier requirement
+      run: pip install -r requirement.txt
+
+    - name: executer le code python
+      run: python app.py
