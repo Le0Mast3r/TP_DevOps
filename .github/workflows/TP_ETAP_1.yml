@@ -16,7 +16,7 @@ jobs:
         
 
     - name: Appeler le fichier requirement
-      run: pip install -r requirement.txt
+      run: pip install -r requirements.txt
 
     - name: executer le code python
       run: python app.py
